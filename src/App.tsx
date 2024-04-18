@@ -1,14 +1,14 @@
+import { AppProvider, Page } from '@shopify/polaris'
+import enTranslations from '@shopify/polaris/locales/en.json'
+import { HelloPolaris } from './components/HelloPolaris'
+
 import './App.css'
-import enTranslations from '@shopify/polaris/locales/en.json';
-import {AppProvider, Page, LegacyCard, Button} from '@shopify/polaris';
 
 function App() {
   return (
     <AppProvider i18n={enTranslations}>
-      <Page title="Example app">
-        <LegacyCard sectioned>
-          <Button onClick={() => alert('Button clicked!')}>Example button</Button>
-        </LegacyCard>
+      <Page title="Polaris App">
+        <HelloPolaris />
       </Page>
     </AppProvider>
   )
