@@ -16,3 +16,5 @@ yarn-error.log*
 .vscode/settings.json
 
 stats.*
+
+*storybook.log

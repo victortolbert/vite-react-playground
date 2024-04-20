@@ -7,5 +7,7 @@ export default antfu({
     'no-console': 'off',
     'no-debugger': 'off',
     'no-alert': 'off',
+    'react/no-nested-components': 'off',
+    'react-dom/no-missing-button-type': 'off',
   },
 })

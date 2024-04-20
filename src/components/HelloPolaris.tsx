@@ -35,24 +35,24 @@ export function HelloPolaris() {
     setCount(count + 1)
   }
 
-  function MyButton({ count, onClick }: { count: number, onClick: () => void }) {
+  function MyButton({
+    count,
+    onClick,
+  }: {
+    count: number
+    onClick: () => void
+  }) {
     return (
       <button onClick={onClick}>
         Clicked
-        {' '}
-        {count}
-        {' '}
-        times
+        {count} times
       </button>
     )
   }
 
-  const listItems = products.map(product => (
-    <li key={product.id}>
-      {product.title}
-    </li>
-  ),
-  )
+  const listItems = products.map((product) => (
+    <li key={product.id}>{product.title}</li>
+  ))
   function Profile() {
     return (
       <>
@@ -130,7 +130,9 @@ export function HelloPolaris() {
               <Text as="p" variant="bodyMd">
                 View a summary of your online store’s performance.
               </Text>
-              <Button onClick={handleClick} icon={PlusIcon}>Add theme</Button>
+              <Button onClick={handleClick} icon={PlusIcon}>
+                Add theme
+              </Button>
             </Box>
           </Card>
         </Grid.Cell>
@@ -146,7 +148,9 @@ export function HelloPolaris() {
               </Text>
               <ButtonGroup>
                 <Button onClick={handleClick}>Cancel</Button>
-                <Button onClick={handleClick} variant="primary">Save</Button>
+                <Button onClick={handleClick} variant="primary">
+                  Save
+                </Button>
               </ButtonGroup>
             </Box>
           </Card>
@@ -169,7 +173,10 @@ export function HelloPolaris() {
               </BlockStack>
               <InlineStack align="end">
                 <ButtonGroup>
-                  <Button onClick={handleClick} accessibilityLabel="Fulfill items">
+                  <Button
+                    onClick={handleClick}
+                    accessibilityLabel="Fulfill items"
+                  >
                     Fulfill items
                   </Button>
                   <Button
